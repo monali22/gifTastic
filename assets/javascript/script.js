@@ -7,15 +7,25 @@ $(document).ready(function(){
         aniButton.attr("name",arrAnimals[i]);
         $("#buttonArea").append(aniButton);
     }
-
-   $("button").on('click',function(event){
-
+    
+    $("#submitBtn").on('click',function(){
+        alert('clicked');
+        var btn = $("<button>");
+        alert($("#addval").val());
+        btn.text($("#addval").val());
+        btn.attr("name",$("#addval").val());
+        $("#buttonArea").append(btn);
+    
+    });
+    
+    $("button").on('click',function(event){
+    
         $("#imageSec").empty();
-
+    
         //alert($(this).attr("name"));
-
+    
         queryUrl = "http://api.giphy.com/v1/gifs/search?q="+$(this).attr("name")+"&api_key=NtiLcHdbo2uuvHk6exvYQDfjaLWM1gLe&limit=10";
-
+    
         $.ajax({
             url: queryUrl,
             method: "GET"
@@ -24,7 +34,7 @@ $(document).ready(function(){
             var items = response.data;
             console.log(response);
             for(var i=0;i<10;i++){
-
+    
                 var image = $("<img>");
                 image.attr("src",items[i].images.downsized_still.url);
                 image.attr("class","gif");
@@ -37,10 +47,10 @@ $(document).ready(function(){
            
         })
        // console.log("yaaaaa");
-
+    
     });
-
-
+    
+    
     $("img").on("click", function(event) {
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
         var state = $(this).attr("data-state");
@@ -58,12 +68,12 @@ $(document).ready(function(){
         }
       });
     
-
-
     
 
 
-});
 
+
+
+});
 
 
