@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-<div id="buttonArea"></div>
-<br>
-<div id="addButton">
-    <input type="text" width="100px" id="addval">
-    <input type="button" value="submit" id="submitBtn">
-</div>
-<div id="imageSec"></div>
-    
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
- <script src="assets/javascript/script.js"></script>   
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Gif Tastic</h1>
+        <p class="lead">You can click on buttons to get the gif's of those buttons</p>
+        <p>You can play with the gif's by clicking on it to play and pause the gif.</p>
+        <p>You can also add more buttons by typing in the text box and clicking submit button.</p>
+        <div id="addButton">
+            <input type="text" width="100px" id="addval">
+            <input type="button" value="submit" id="submitBtn">
+        </div>
+    </div>
+    <div id="buttonArea"></div>
+    <br>
+
+
+    <div id="imageSec"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
+
 </html>
